@@ -13,7 +13,7 @@ func ResultTest(t *testing.T) {
 	}
 
 	// 返回1 预置状态码和消息 [规范]
-	response := Success().SetCode(SuccessCode).SetMessage(CodeMessage[SuccessCode]).SetData(data)
+	response := Success().SetCode(SuccessCode).SetMessage(MessageCodeMap[SuccessCode]).SetData(data)
 	fmt.Println(response)
 
 	// 返回2 自定义状态码和消息 [灵活]

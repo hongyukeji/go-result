@@ -19,15 +19,15 @@ func NewResult(code string, message string, data interface{}) *Result {
 }
 
 func Success() *Result {
-	return NewResult(SuccessCode, CodeMessage[SuccessCode], nil)
+	return NewResult(SuccessCode, MessageCodeMap[SuccessCode], nil)
 }
 
 func Fail() *Result {
-	return NewResult(FailCode, CodeMessage[FailCode], nil)
+	return NewResult(FailCode, MessageCodeMap[FailCode], nil)
 }
 
 func Error() *Result {
-	return NewResult(ErrorCode, CodeMessage[ErrorCode], nil)
+	return NewResult(ErrorCode, MessageCodeMap[ErrorCode], nil)
 }
 
 func (r *Result) GetMessage() string {
